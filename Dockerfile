@@ -9,7 +9,8 @@ ENV SEAWEEDFS_VERSION=$SEAWEEDFS_VERSION
 ARG GOARCH=amd64
 ENV GOARCH=$GOARCH
 
-RUN apk update && \
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories && \
+    apk update && \
     apk add fuse3 && \
     apk add fuse && \
     apk add --no-cache --virtual build-dependencies --update wget curl ca-certificates && \
