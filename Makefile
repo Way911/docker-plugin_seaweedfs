@@ -1,4 +1,4 @@
-PLUGIN_NAME = katharostech/seaweedfs-volume-plugin
+PLUGIN_NAME = registry.cn-shanghai.aliyuncs.com/wayneqll/seaweedfs-volume-plugin
 PLUGIN_TAG ?= latest
 
 all: clean rootfs create
